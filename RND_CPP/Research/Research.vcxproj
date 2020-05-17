@@ -157,6 +157,7 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="src\NoExcept_01.cpp" />
+    <ClCompile Include="src\Template_01.cpp" />
     <ClCompile Include="src\Threading_01.cpp" />
     <ClCompile Include="src\Threading_02.cpp" />
   </ItemGroup>

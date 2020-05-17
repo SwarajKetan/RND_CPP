@@ -34,9 +34,6 @@ struct Threading_01  : public Runnable{
         auto yy = std::async(std::launch::deferred, [&] { g(); });
         auto zz = std::async(std::launch::async | std::launch::deferred, [&] { i(); });
 
-        //xx.wait();
-        //yy.wait();
-
         std::cout << "Hello World!\n";
     }
 
