@@ -6,6 +6,8 @@
 #include "src/Template_01.cpp"
 #include "src/LValueRValue.cpp"
 #include "src/Alignment.cpp"
+#include "src/Threading_03.cpp"
+#include "src/Casting.cpp"
 
 // Run whatever you want
-RUN(Alignment);
+RUN(Casting);
