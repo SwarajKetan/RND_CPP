@@ -32,3 +32,7 @@
 *.app
 /RND_CPP/.vs/RND_CPP/v16
 /RND_CPP/bin
+/RND_CPP/DesignPatterns/Debug
+/RND_CPP/DesignPatternsGithub/Debug
+/RND_CPP/Leader/Debug
+/RND_CPP/WindowsRunTime/Debug

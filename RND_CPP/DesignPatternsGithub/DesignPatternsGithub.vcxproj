@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{3102130C-1BC6-4393-AF59-027B56C1DAFA}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Research</RootNamespace>
+    <ProjectGuid>{d1dad35b-fd4d-4d7a-aed2-4ef5577c435c}</ProjectGuid>
+    <RootNamespace>DesignPatternsGithub</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -72,48 +72,22 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)bin\Intermediates\$(Platform)\$(Configuration)\</IntDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)bin\Intermediates\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)bin\Intermediates\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)bin\Intermediates\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <ClCompile>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
-      <WarningLevel>Level3</WarningLevel>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -122,15 +96,12 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -139,17 +110,26 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -159,50 +139,30 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="src\AbstractFactory.cpp" />
-    <ClCompile Include="src\Alignment.cpp" />
-    <ClCompile Include="src\ArraysVectors.cpp" />
-    <ClCompile Include="src\Attributes.cpp" />
-    <ClCompile Include="src\Casting.cpp" />
-    <ClCompile Include="src\Declarations.cpp" />
-    <ClCompile Include="src\DeclType.cpp" />
-    <ClCompile Include="src\Destructors.cpp" />
-    <ClCompile Include="src\Extern__.cpp" />
-    <ClCompile Include="src\FriendFunction.cpp" />
-    <ClCompile Include="src\Inheritance.cpp" />
-    <ClCompile Include="src\Lambda.cpp" />
-    <ClCompile Include="src\LC153_FindMinRotatedArray.cpp" />
-    <ClCompile Include="src\LC33.cpp" />
-    <ClCompile Include="src\LC394DecodeWays.cpp" />
-    <ClCompile Include="src\LC81SearchInRotatedSortedArrayII.cpp" />
-    <ClCompile Include="src\LValueRValue.cpp" />
-    <ClCompile Include="src\MostVexingParse.cpp" />
-    <ClCompile Include="src\MoveConstructor.cpp" />
-    <ClCompile Include="src\MythOfConst.cpp" />
-    <ClCompile Include="src\NoExcept_01.cpp" />
-    <ClCompile Include="src\Permutations.cpp" />
-    <ClCompile Include="src\PointerToPointer.cpp" />
-    <ClCompile Include="src\PriorityQueue.cpp" />
-    <ClCompile Include="src\ReferenceAndPointer.cpp" />
-    <ClCompile Include="src\RestoreIPAddress.cpp" />
-    <ClCompile Include="src\SharedPointers.cpp" />
-    <ClCompile Include="src\SmartPointers.cpp" />
-    <ClCompile Include="src\StaticConcepts.cpp" />
-    <ClCompile Include="src\std_move.cpp" />
-    <ClCompile Include="src\StringView.cpp" />
-    <ClCompile Include="src\SubsetsII.cpp" />
-    <ClCompile Include="src\TappingRainWater.cpp" />
-    <ClCompile Include="src\Template_01.cpp" />
-    <ClCompile Include="src\Threading_01.cpp" />
-    <ClCompile Include="src\Threading_02.cpp" />
-    <ClCompile Include="src\Threading_03.cpp" />
-    <ClCompile Include="src\usageOfdeclspec.cpp" />
-    <ClCompile Include="src\VirtualFunctions.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="src\Runnable.h" />
-    <ClInclude Include="src\_main.h" />
+    <ClCompile Include="design-patterns-cpp\abstract-factory\AbstractFactory.cpp" />
+    <ClCompile Include="design-patterns-cpp\adapter\ClassAdapter.cpp" />
+    <ClCompile Include="design-patterns-cpp\adapter\ObjectAdapter.cpp" />
+    <ClCompile Include="design-patterns-cpp\bridge\Bridge.cpp" />
+    <ClCompile Include="design-patterns-cpp\builder\Builder.cpp" />
+    <ClCompile Include="design-patterns-cpp\chain-of-responsibility\ChainOfResponsibility.cpp" />
+    <ClCompile Include="design-patterns-cpp\command\Command.cpp" />
+    <ClCompile Include="design-patterns-cpp\composite\Composite.cpp" />
+    <ClCompile Include="design-patterns-cpp\decorator\Decorator.cpp" />
+    <ClCompile Include="design-patterns-cpp\facade\Facade.cpp" />
+    <ClCompile Include="design-patterns-cpp\factory-method\FactoryMethod.cpp" />
+    <ClCompile Include="design-patterns-cpp\flyweight\Flyweight.cpp" />
+    <ClCompile Include="design-patterns-cpp\interpreter\Interpreter.cpp" />
+    <ClCompile Include="design-patterns-cpp\iterator\Iterator.cpp" />
+    <ClCompile Include="design-patterns-cpp\mediator\Mediator.cpp" />
+    <ClCompile Include="design-patterns-cpp\memento\Memento.cpp" />
+    <ClCompile Include="design-patterns-cpp\observer\Observer.cpp" />
+    <ClCompile Include="design-patterns-cpp\prototype\Prototype.cpp" />
+    <ClCompile Include="design-patterns-cpp\proxy\Proxy.cpp" />
+    <ClCompile Include="design-patterns-cpp\singleton\Singleton.cpp" />
+    <ClCompile Include="design-patterns-cpp\state\State.cpp" />
+    <ClCompile Include="design-patterns-cpp\strategy\Strategy.cpp" />
+    <ClCompile Include="design-patterns-cpp\template-method\TemplateMethod.cpp" />
+    <ClCompile Include="design-patterns-cpp\visitor\Visitor.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

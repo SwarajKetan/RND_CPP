@@ -36,6 +36,9 @@ struct Threading_02 : public Runnable {
 			std::cout << ex.what() << std::endl;
 		}
 
-
 	};
+
+	~Threading_02() {
+		delete map;
+	}
 };

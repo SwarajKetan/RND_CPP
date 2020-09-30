@@ -33,6 +33,13 @@ struct Template_01 : public Runnable {
 	{
 		auto x = MyTemplate<Runnable>(new Template_01());
 		x.DoExecute();
+
+		myTemplatedMethod(20);
+	}
+
+	template<typename T>
+	void myTemplatedMethod(T arg) {
+
 	}
 
 };

@@ -1,6 +1,9 @@
 #pragma once
 #include "Runnable.h"
 #include <thread>
+#include <mutex>
+#include <functional>
+#include <initializer_list>
 // Different tways to create thread
 
 struct Threading_03 : public Runnable {
@@ -62,6 +65,36 @@ struct Threading_03 : public Runnable {
 			std::cout << std::endl;
 		};
 	};
+
+	std::mutex _mutex;
+
+
+	template<class T>
+	void func(std::initializer_list<T> args) {
+		for (auto a : args)
+			std::cout << a << std::endl;
+	}
+
+	// for threadsafe execution
+	void useOfMutex() {
+
+		std::unique_lock<std::mutex> uniq(_mutex, std::defer_lock);
+		
+		uniq.lock();
+		std::cout << "some critical section \n";
+		uniq.unlock();
+
+		std::function<void(int, std::string, int)> somelambda = [](int a, std::string b, int c) {
+			std::cout << "abc" << std::endl;
+		};
+
+		//run_callback(somelambda);
+
+		//std::lock_guard<std::mutex> lock(_mutex);
+		//{
+		//	//do something
+		//}
+	}
 
 	void Functor() {
 		std::thread th((class_03()), 5);
